@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="AddPartUI" maxHeight="-Infinity" minWidth="50.0" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddPartController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="390.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="210.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <TextField disable="true" maxWidth="100.0" prefWidth="100.0" promptText="Auto Gen - Disabled" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="addPartNameTextField" maxWidth="100.0" prefWidth="100.0" promptText="Part Name" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <TextField fx:id="addPartStockTextField" maxWidth="100.0" prefWidth="100.0" promptText="Inv" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <TextField fx:id="addPartPriceTextField" maxWidth="100.0" prefWidth="100.0" promptText="Price/Cost" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <TextField fx:id="addPartMaxTextField" maxWidth="100.0" prefWidth="100.0" promptText="Max" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <TextField fx:id="addPartMinTextField" maxWidth="100.0" prefWidth="100.0" promptText="Min" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   <TextField fx:id="addPartMachineIdTextField" maxWidth="100.0" prefWidth="100.0" promptText="Mach ID" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <TextField fx:id="addPartCompNameTextField" disable="true" maxWidth="100.0" prefWidth="100.0" promptText="Comp Name" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+      <GridPane.margin>
+         <Insets left="100.0" />
+      </GridPane.margin>
+   </TextField>
+   <Button maxWidth="60.0" mnemonicParsing="false" onAction="#addPartSaveButtonClicked" text="Save" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+   <Button maxWidth="60.0" mnemonicParsing="false" onAction="#addPartCancelButtonClicked" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+      <GridPane.margin>
+         <Insets right="30.0" />
+      </GridPane.margin>
+   </Button>
+   <RadioButton fx:id="addPartRadioInHouse" mnemonicParsing="false" onAction="#addPartRadioInHouseSelected" text="In-House" GridPane.halignment="CENTER">
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="13.0" />
+      </font>
+      <toggleGroup>
+         <ToggleGroup fx:id="addPartToggleGroup" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="addPartRadioOutsourced" mnemonicParsing="false" onAction="#addPartRadioOutsourcedSelected" text="Outsourced" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+      <GridPane.margin>
+         <Insets left="-40.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="13.0" />
+      </font>
+   </RadioButton>
+   <Label text="Add Part" textFill="#1d8cd7">
+      <font>
+         <Font size="20.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="10.0" />
+      </GridPane.margin>
+   </Label>
+   <Label text="ID" GridPane.rowIndex="1">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+   </Label>
+   <Label text="Name" GridPane.rowIndex="2">
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label text="Inv" GridPane.rowIndex="3">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+   </Label>
+   <Label text="Price/Cost" GridPane.rowIndex="4">
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label text="Max" GridPane.rowIndex="5">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+   </Label>
+   <Label text="Min" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+      <GridPane.margin>
+         <Insets right="10.0" />
+      </GridPane.margin>
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <Label fx:id="addPartMachineIdLabel" text="Machine ID" GridPane.rowIndex="6">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+   </Label>
+   <Label fx:id="addPartCompNameLabel" text="Company Name" visible="false" GridPane.rowIndex="6">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="40.0" />
+      </GridPane.margin>
+   </Label>
+</GridPane>
